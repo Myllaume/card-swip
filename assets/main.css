@@ -1,0 +1,51 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    background-color: whitesmoke;
+}
+
+.desk {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+
+.desk__wrapper {
+    margin: 0 auto;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+}
+
+@keyframes swip-left {
+    from { transform: unset; }
+
+    to { transform: translate(-100vw) rotate(-20deg); }
+}
+
+@keyframes swip-right {
+    from { transform: unset; }
+
+    to { transform: translate(100vw) rotate(20deg); }
+}
+
+.card {
+    width: 300px;
+    height: 500px;
+    background-color: white;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    padding: 15px;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+.anim-swip-left {
+    animation-name: swip-left;
+    animation-duration: .2s;
+}
+
+.anim-swip-right {
+    animation-name: swip-right;
+    animation-duration: .2s;
+}
